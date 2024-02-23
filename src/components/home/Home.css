@@ -1,0 +1,145 @@
+/*===GOOGLE FONTS===*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+/*===VARIABLES CSS===*/
+:root {
+  --header-height: 3rem;
+  --nav-width: 324px;
+
+  /*===Font weight===*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*Colours*/
+  --first-color: #cc4b2c;
+  --first-color-dark: #662616;
+  --first-color-darken: #290f09;
+  --text-color: #54423d;
+  --first-color-light: #eae7e6;
+  --first-color-lighten: #fffafa;
+  --boxShadowColor: hsl(240, 4%, 36%);
+
+  /*===Font and topography===*/
+  --body-font: "Poppins", san-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*===Margenes===*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+
+  /*===z index===*/
+  --z-fixed: 100;
+}
+.home {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: var(--first-color-lighten);
+  mix-blend-mode: hard-light;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.homeContent {
+  width: 100%;
+  position: absolute;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: var(--first-color-darken);
+  z-index: 10;
+}
+
+.homeText {
+  padding: 2rem 0;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+
+  .homeTitle {
+    text-align: center;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+  }
+
+  .homeDesc {
+    line-height: 1.5;
+    text-align: center;
+    color: var(--first-color-dark);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+  }
+}
+
+.homeCards {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+
+  .card {
+    text-align: centre;
+    height: 100%;
+    border-radius: 10px;
+    overflow: visible;
+    align-items: center;
+    padding: 5px 5px;
+    margin: auto;
+    background: var(--first-color-dark);
+    box-shadow: 0 2px solid var(--boxShadowColor);
+
+    .cardTitle {
+      display: block;
+      font-weight: var(--font-semi-bold);
+      color: var(--first-color-darken);
+      margin-bottom: 1rem;
+    }
+
+    .cardDesc{
+      color: var(--first-color-lighten);
+      line-height: 1.5;
+      font-weight: var(--font-medium);
+      /* text-align: center; */
+      text-align: justify;
+    }
+    li{
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+}
